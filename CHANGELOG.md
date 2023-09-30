@@ -1,8 +1,73 @@
-# Next
+# 1.6.1
+
+**Notable bug fixes**
+
+- properly deal with Windows-style newlines
+
+**Other changes**
+
+- improve man pages
+
+# 1.6.0
+
+**New features**
+
+- `--unix` option to normalize all line endings to LF
+- `--primary` option to serve the selection to `primary` instead than `clipboard`
+- `show-history` command to obtain a json representation of the clipboard's history
+
+**Other changes**
+
+- when using the `bemenu` tool we don't forcefully set it to bottom position anymore
+
+# 1.5.2
+
+**Notable bug fixes**
+
+- wl-copy is now truly daemonized, allowing calling `alacritty -e sh -c clipman pick`
+- fzf couldn't recover the clipboard content in some cases
+
+# 1.5.1
+
+**Notable bug fixes**
+
+- we now store the history under 600 permissions (existing users should changing permissions manually or call `clipman clear -a` to clear the previous file)
+- we don't lose the final newline anymore, nor windows' \r
+
+# 1.5.0
+
+**New features**
+
+- support custom selectors
+
+**Notable bug fixes**
+
+- when using bemenu, the selector didn't work for the oldest element in history
+
+# 1.4.0
+
+**New features**
+
+- optional desktop notifications on errors
+
+**Notable bug fixes**
+
+- the toolArgs option now understands complex patterns (spaces, quotes)
+
+# 1.3.0
+
+**Breaking changes**
+
+- we don't set a default tool anymore for picking/clearing the history
 
 **New features**
 
 - add support for bemenu selector, a multi backend dmenu clone
+- add a man page
+
+**Notable Bug fixes**
+
+- some input was not served because it wasn't recognized as text
 
 # 1.2.0
 
